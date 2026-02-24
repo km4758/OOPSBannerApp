@@ -5,29 +5,27 @@ public class javapractice {
         
         Scanner input = new Scanner(System.in);
         
-        double number1, number2;
+        double base, height;
         
         // Taking user input
-        System.out.print("Enter first number: ");
-        number1 = input.nextDouble();
+        System.out.print("Enter the base of the triangle in cm: ");
+        base = input.nextDouble();
         
-        System.out.print("Enter second number: ");
-        number2 = input.nextDouble();
+        System.out.print("Enter the height of the triangle in cm: ");
+        height = input.nextDouble();
         
-        // Performing operations
-        double addition = number1 + number2;
-        double subtraction = number1 - number2;
-        double multiplication = number1 * number2;
-        double division = number1 / number2;
+        // Area in square centimeters
+        double areaSqCm = 0.5 * base * height;
         
-        // Printing results
-        System.out.println("The addition, subtraction, multiplication, and division value of 2 numbers "
-                + number1 + " and " + number2 + " is "
-                + addition + ", "
-                + subtraction + ", "
-                + multiplication + ", and "
-                + division);
+        // Convert square centimeters to square inches
+        // 1 inch = 2.54 cm → 1 sq inch = (2.54 × 2.54) sq cm
+        double areaSqIn = areaSqCm / (2.54 * 2.54);
+        
+        // Output
+        System.out.println("The Area of the triangle in sq in is " + areaSqIn +
+                           " and sq cm is " + areaSqCm);
         
         input.close();
     }
 }
+
